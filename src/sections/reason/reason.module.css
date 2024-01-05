@@ -1,0 +1,12 @@
+.reason {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    padding: 3rem 4rem;
+}
+
+.reason h4 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 10px 0;
+}

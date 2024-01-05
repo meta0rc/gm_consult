@@ -1,0 +1,19 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #001d35;
+  color: #fff;
+  padding: 0 4rem;
+}
+
+.about h2 {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.about img {
+  position: relative;
+  bottom: -4px;
+}

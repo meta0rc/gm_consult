@@ -1,0 +1,28 @@
+.banner { 
+    background-image: url('./banner.jpg');
+    height: calc(100vh - 89px);
+    background-size: 100%;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5rem;
+}
+
+.bannerContent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bannerContent h1 {
+    font-size: 3.5rem;
+}
+.bannerContent button {
+    width: 100px;
+}
