@@ -21,7 +21,7 @@ export const Plans = () => {
 
               <ul>
                 {plan.bennefits.map((itemBennefit) => (
-                  <li>
+                  <li key={itemBennefit + "-" + current}>
                     <Icon fill={current === 1 ? "#333" : "#fff"} />
 
                     {itemBennefit}
@@ -58,12 +58,12 @@ const planList = [
     price: "R$ 150,00",
     bennefits: [
       "Reuniões Mensais",
+      "Analise profunda",
       "Revisão simples",
       "Validação de requisitos",
       "Reuniões Mensais",
       "Revisão simples",
       "Validação de requisitos",
-      "Validação de integridade",
     ],
   },
   {
