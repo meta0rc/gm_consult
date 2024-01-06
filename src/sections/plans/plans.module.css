@@ -9,6 +9,7 @@
 
 .cardList {
   gap: 2.5rem;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -25,6 +26,17 @@
   background: #001d35;
 }
 
+.card button {
+  background: #000;
+  color: #fff;
+}
+
+.card button:hover {
+  background-color: #fff;
+  color: #001d35;
+  border: 3px solid #001d35;
+}
+
 .blackCard button {
   background: #efefef;
   color: #494949;
@@ -34,16 +46,6 @@
 .blackCard button:hover {
   background-color: #fff;
   color: #001d35;
-}
-.card button {
-  background: #efefef;
-  color: #3b3b3b;
-}
-
-.card button:hover {
-  background-color: #fff;
-  color: #001d35;
-  border: 3px solid #001d35;
 }
 
 .blackCard .circle-check {

@@ -3,7 +3,7 @@ import styles from "./plans.module.css";
 import { PlanAdd } from "./plan-button-add";
 export const Plans = () => {
   return (
-    <section className={`${styles.plans} main`}>
+    <section className={`${styles.plans} main`} id="plans">
       <div className="container">
         <h2 className="section-title">
           Nossos planos disponiveis para o seu negócio
@@ -22,7 +22,10 @@ export const Plans = () => {
                 {plan.price}/<span>mês</span>
               </h2>
 
-              <PlanBennefitList bennefits={plan.bennefits} />
+              <PlanBennefitList
+                bennefits={plan.bennefits}
+                iconColor={current === 1 ? "#000" : "#fff"}
+              />
             </div>
 
             <PlanAdd plan={plan} />
@@ -33,12 +36,17 @@ export const Plans = () => {
   );
 };
 
-export const PlanBennefitList = ({ bennefits }: { bennefits: string[] }) => (
+export const PlanBennefitList = ({
+  bennefits,
+  iconColor = "#fff",
+}: {
+  bennefits: string[];
+  iconColor?: string;
+}) => (
   <ul className={styles.bennefits}>
     {bennefits.map((itemBennefit, current) => (
       <li key={itemBennefit + "-" + current}>
-        <Icon fill={current === 1 ? "#333" : "#fff"} />
-
+        <Icon fill={iconColor} />
         {itemBennefit}
       </li>
     ))}
@@ -47,8 +55,8 @@ export const PlanBennefitList = ({ bennefits }: { bennefits: string[] }) => (
 const planList = [
   {
     icon: "shop",
-    name: "Simples",
-    price: "R$ 150,00",
+    name: "Comum",
+    price: "R$ 99,00",
     bennefits: [
       "Reuniões Mensais",
       "Revisão simples",
@@ -58,7 +66,7 @@ const planList = [
   },
   {
     icon: "shop",
-    name: "Simples",
+    name: "Plus",
     price: "R$ 150,00",
     bennefits: [
       "Reuniões Mensais",
@@ -72,8 +80,8 @@ const planList = [
   },
   {
     icon: "shop",
-    name: "Simples",
-    price: "R$ 150,00",
+    name: "Premium",
+    price: "R$ 200,00",
 
     bennefits: [
       "Reuniões Mensais",

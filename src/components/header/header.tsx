@@ -12,7 +12,6 @@ export const Header = () => {
         height={40}
         priority
       />
-
       <HeaderNav />
     </header>
   );
