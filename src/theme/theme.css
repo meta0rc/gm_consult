@@ -4,7 +4,7 @@
 }
 
 .container {
-  max-width: 1300px;
+  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,5 +33,6 @@
   }
   .section-title {
     font-size: 2rem;
+    padding: 0 1rem;
   }
 }

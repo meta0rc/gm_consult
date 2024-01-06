@@ -1,0 +1,42 @@
+.planDetails {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  z-index: 2;
+  overflow-y: auto;
+  background-image: url("./plan-background.jpg");
+}
+
+.planDetails p {
+  margin-top: 10px;
+}
+
+.planDetails ul {
+  margin-top: 20px;
+}
+.action {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.action button {
+  height: 40px;
+}
+
+.planContent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 500px) {
+  .planDetails {
+    padding: 3rem;
+  }
+}

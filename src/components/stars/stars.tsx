@@ -6,9 +6,6 @@ type Props = {
 export const Stars = ({ rate }: Props) => {
   const isShorted = String(rate).length > 1;
 
-  console.log(isShorted);
-
-  console.log(Number(rate.toFixed(0)));
   return (
     <div style={{ display: "flex", gap: 1, alignItems: "center" }}>
       {[...Array(5)].map((_, current) => (

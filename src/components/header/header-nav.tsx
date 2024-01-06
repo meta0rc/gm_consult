@@ -9,11 +9,19 @@ export const HeaderNav = () => {
 
   return (
     <>
-      <button onClick={() => setOpen(!open)}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div className={styles.mobileControl}>
+        <ShoppingBag />
+        <button onClick={() => setOpen(!open)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      {open && (
+        <div className={styles.backdrop} onClick={() => setOpen(false)} />
+      )}
+
       <nav className={open ? styles.navActive : "nav"}>
         {open && <button onClick={() => setOpen(!open)}>x</button>}
         <ul>
@@ -29,8 +37,7 @@ export const HeaderNav = () => {
           <li>
             <a href="#contact">Contato</a>
           </li>
-
-          <li>
+          <li className={styles.bag}>
             <ShoppingBag />
           </li>
         </ul>

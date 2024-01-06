@@ -22,15 +22,7 @@ export const Plans = () => {
                 {plan.price}/<span>mês</span>
               </h2>
 
-              <ul>
-                {plan.bennefits.map((itemBennefit) => (
-                  <li key={itemBennefit + "-" + current}>
-                    <Icon fill={current === 1 ? "#333" : "#fff"} />
-
-                    {itemBennefit}
-                  </li>
-                ))}
-              </ul>
+              <PlanBennefitList bennefits={plan.bennefits} />
             </div>
 
             <PlanAdd plan={plan} />
@@ -41,6 +33,17 @@ export const Plans = () => {
   );
 };
 
+export const PlanBennefitList = ({ bennefits }: { bennefits: string[] }) => (
+  <ul className={styles.bennefits}>
+    {bennefits.map((itemBennefit, current) => (
+      <li key={itemBennefit + "-" + current}>
+        <Icon fill={current === 1 ? "#333" : "#fff"} />
+
+        {itemBennefit}
+      </li>
+    ))}
+  </ul>
+);
 const planList = [
   {
     icon: "shop",

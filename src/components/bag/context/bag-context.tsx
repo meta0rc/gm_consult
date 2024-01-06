@@ -5,7 +5,9 @@ import { createContext, useContext, useState } from "react";
 interface IBagContext {
   plan: Plan;
   addPlan: (newPlan: Plan) => void;
+  toggleShowPlanDetails: VoidFunction;
   removePlan: VoidFunction;
+  details: boolean;
 }
 
 export const BagContext = createContext<IBagContext>(null!);
@@ -18,8 +20,10 @@ export const BagShoppingProvider = ({
   children: React.ReactNode;
 }) => {
   const [plan, setPlan] = useState<Plan>(null);
+  const [details, setDetails] = useState(false);
 
   const addPlan = (newPlan: any) => {
+    window.scrollTo(0, 0);
     setPlan(newPlan);
   };
 
@@ -27,10 +31,16 @@ export const BagShoppingProvider = ({
     setPlan(null);
   };
 
+  const toggleShowPlanDetails = () => {
+    setDetails(!details);
+  };
+
   return (
     <BagContext.Provider
       value={{
         plan,
+        details,
+        toggleShowPlanDetails,
         addPlan,
         removePlan,
       }}

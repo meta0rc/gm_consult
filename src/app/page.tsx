@@ -6,6 +6,7 @@ import { Plans } from "@/sections/plans/plans";
 import { Reviews } from "@/sections/reviews/reviews";
 import Mission from "@/sections/mission/mission";
 import { BagShoppingProvider } from "@/components/bag/context/bag-context";
+import { PlanDetails } from "@/components/bag/plan-details";
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
         <Banner />
         <Reason />
         <About />
+
+        <PlanDetails />
       </main>
     </BagShoppingProvider>
   );

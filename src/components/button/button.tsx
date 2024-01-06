@@ -6,7 +6,7 @@ export const Button = ({
 }: React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <button {...props} className={styles.button}>
-      <p>{children}</p>
+      {children}
     </button>
   );
 };
