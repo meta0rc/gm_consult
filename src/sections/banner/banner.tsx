@@ -12,7 +12,6 @@ export default function Banner() {
           harum quis nobis eius dignissimos sequi illum aspernatur, atque
           cupiditate sit.
         </p>
-        <Button>Confira já</Button>
       </div>
     </div>
   );

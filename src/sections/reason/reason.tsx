@@ -3,16 +3,13 @@ import styles from "./reason.module.css";
 export const Reason = () => {
   return (
     <section className={styles.reason}>
-      <div className="container">
+      <div>
         {options.map((item, current) => (
-          <div key={current}>
-            <img src={`./${item.icon}.svg`} />
+          <div key={current} className={styles.itemReason}>
+            <img src={`./icons/${item.icon}.png`} />
             <div>
-              <h4>Crescimento</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto iure explicabo officia aut reiciendis.
-              </p>
+              <h4>{item.title}</h4>
+              {/* <p>{item.text}</p> */}
             </div>
           </div>
         ))}
@@ -23,23 +20,23 @@ export const Reason = () => {
 
 const options = [
   {
-    icon: "shop",
-    title: "Crescimento",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    icon: "analise",
+    title: "Análise de mercado",
+    text: "Com as melhores tecnologias, proporcionamos uma análise profunda para os seus negócios.",
   },
   {
-    icon: "shop",
-    title: "Crescimento",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+    icon: "conexao",
+    title: "Networking",
+    text: "Conectando você as melhores soluções possiveis.",
   },
   {
-    icon: "shop",
-    title: "Crescimento",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    icon: "comunicacao",
+    title: "Relacionamentos",
+    text: "Estabelicimento de relacionamentos confiáveis e comunicação interina com você",
   },
   {
-    icon: "shop",
+    icon: "crescimento",
     title: "Crescimento",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elits.",
+    text: "Promover crescimento e fazer você alcançar os seus objetivos",
   },
 ];

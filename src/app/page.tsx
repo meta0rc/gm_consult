@@ -16,9 +16,11 @@ export default function Home() {
         <Mission />
         <Plans />
         <Reviews />
+        {/* <About /> */}
+
         <Banner />
+
         <Reason />
-        <About />
 
         <PlanDetails />
       </main>
