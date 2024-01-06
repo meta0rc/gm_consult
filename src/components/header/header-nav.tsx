@@ -11,6 +11,7 @@ export const HeaderNav = () => {
     { link: "#home", name: "Ínicio" },
     { link: "#motives", name: "Nós" },
     { link: "#plans", name: "Planos" },
+    { link: "#reviews", name: "Avaliações" },
     { link: "#contact", name: "Contato" },
   ];
 

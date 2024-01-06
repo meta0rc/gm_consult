@@ -4,7 +4,7 @@ import styles from "./reviews.module.css";
 
 export const Reviews = () => {
   return (
-    <section className={styles.reviews}>
+    <section className={styles.reviews} id="reviews">
       <h2 className="section-title">
         Algumas das principaias avaliações de quem contratou os nossos serviços
       </h2>
