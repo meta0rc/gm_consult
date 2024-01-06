@@ -1,10 +1,13 @@
 import { Button } from "@/components/button/button";
 import styles from "./plans.module.css";
+import { PlanAdd } from "./plan-button-add";
 export const Plans = () => {
   return (
     <section className={`${styles.plans} main`}>
       <div className="container">
-        <h2 className="section-title">Selecione o seu plano</h2>
+        <h2 className="section-title">
+          Nossos planos disponiveis para o seu negócio
+        </h2>
       </div>
       <div className={`container al-baseline ${styles.cardList}`}>
         {planList.map((plan, current) => (
@@ -30,9 +33,7 @@ export const Plans = () => {
               </ul>
             </div>
 
-            <Button>
-              <h3>Conferir já</h3>
-            </Button>
+            <PlanAdd plan={plan} />
           </div>
         ))}
       </div>

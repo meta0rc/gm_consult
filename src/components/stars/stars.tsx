@@ -10,7 +10,7 @@ export const Stars = ({ rate }: Props) => {
 
   console.log(Number(rate.toFixed(0)));
   return (
-    <div style={{ display: "flex", gap: 1 }}>
+    <div style={{ display: "flex", gap: 1, alignItems: "center" }}>
       {[...Array(5)].map((_, current) => (
         <div key={current}>
           {isShorted && Number(rate.toFixed(0)) === current + 1 ? (
@@ -49,10 +49,13 @@ const StarCut = () => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
-    width="17px"
-    height="17px"
+    width="16px"
+    height="16px"
     viewBox="0 0 503.559 503.559"
     xmlSpace="preserve"
+    style={{
+      marginTop: 1,
+    }}
   >
     <path
       style={{

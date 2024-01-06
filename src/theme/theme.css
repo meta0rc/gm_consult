@@ -31,4 +31,7 @@
   .container {
     flex-wrap: wrap;
   }
+  .section-title {
+    font-size: 2rem;
+  }
 }

@@ -12,6 +12,8 @@
 
 .bannerContent {
   width: 50%;
+  background-color: #00000077;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;

@@ -4,22 +4,21 @@ import { Reason } from "@/sections/reason/reason";
 import { About } from "@/sections/about-us/about-us";
 import { Plans } from "@/sections/plans/plans";
 import { Reviews } from "@/sections/reviews/reviews";
+import Mission from "@/sections/mission/mission";
+import { BagShoppingProvider } from "@/components/bag/context/bag-context";
 
 export default function Home() {
   return (
-    <>
+    <BagShoppingProvider>
       <Header />
       <main>
-        <Banner />
-
-        <Reason />
-
-        <Reviews />
-
-        <About />
-
+        <Mission />
         <Plans />
+        <Reviews />
+        <Banner />
+        <Reason />
+        <About />
       </main>
-    </>
+    </BagShoppingProvider>
   );
 }

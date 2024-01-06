@@ -1,12 +1,64 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 3rem;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  width: 100%;
+  background-color: #fff;
 }
 
 .header nav ul {
+  display: flex;
+  gap: 16px;
+}
+
+.header button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem;
+  }
+  .header nav {
+    transition: 0.5s ease-in-out;
+    position: fixed;
+    background-color: #000;
+    color: #fff;
+    top: 0;
+    right: -100%;
+    left: auto;
+    bottom: 0;
+    padding: 4rem;
+  }
+  .header .navActive {
+    right: 0;
+    bottom: 0;
+    width: 70%;
+  }
+  .header nav ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .header button {
     display: flex;
-    gap: 16px;
+    gap: 5px;
+    flex-direction: column;
+    background: none;
+    border: none;
+  }
+  .header button span {
+    height: 2px;
+    width: 30px;
+    background: #000;
+  }
+
+  .header nav button {
+    color: #fff;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+  }
 }
